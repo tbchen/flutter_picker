@@ -479,11 +479,12 @@ class PickerWidgetState<T> extends State<_PickerWidget> {
       child: picker.title == null
           ? SizedBox()
           : DefaultTextStyle(
-              style: (theme!.textTheme.headline6 ?? theme!.textTheme.titleLarge)
-                      ?.copyWith(
-                    fontSize: Picker.DefaultTextSize,
-                  ) ??
-                  TextStyle(fontSize: Picker.DefaultTextSize),
+              style:
+                  (theme!.textTheme.titleLarge ?? theme!.textTheme.titleLarge)
+                          ?.copyWith(
+                        fontSize: Picker.DefaultTextSize,
+                      ) ??
+                      TextStyle(fontSize: Picker.DefaultTextSize),
               textAlign: TextAlign.center,
               overflow: TextOverflow.ellipsis,
               child: picker.title!),
